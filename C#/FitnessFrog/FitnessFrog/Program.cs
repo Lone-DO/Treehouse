@@ -5,7 +5,7 @@ namespace Treehouse.FitnessFrog
     {
         static void Main(string[] args)
         {
-            int runningTotal = 0;
+            double runningTotal = 0;
 
             bool excersising = true;
             while (excersising)
@@ -13,9 +13,8 @@ namespace Treehouse.FitnessFrog
                 // Prompt user for minutes exercised 
                 Console.Write("Enter how many minutes you excersised or type \"quit\" to stop: ");
                 string entry = Console.ReadLine();
-                entry = entry.ToLower();
 
-                if (entry == "quit")
+                if (entry.ToLower() == "quit")
                 {
                     excersising = !excersising;
                 }
@@ -24,7 +23,7 @@ namespace Treehouse.FitnessFrog
                     try
                     {
                         // Add minutes exercised to total 
-                        int minutes = int.Parse(entry);
+                        double minutes = double.Parse(entry);
                         
                          
                         if (minutes <= 0)
