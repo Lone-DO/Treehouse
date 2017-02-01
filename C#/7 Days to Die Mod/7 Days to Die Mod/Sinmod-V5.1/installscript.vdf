@@ -1,0 +1,24 @@
+"InstallScript"
+{
+	"Run Process"
+	{
+		"easyanticheat"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Valve\\Steam\\Apps\\7dtd_EAC"
+			"process 1"		"%INSTALLDIR%\\EasyAntiCheat\\EasyAntiCheat_Setup.exe"
+			"command 1"		"install 17 -console"
+		}
+	}
+	"Run Process On Uninstall"
+	{
+		"easyanticheat"
+		{
+			"process 1"		"%INSTALLDIR%\\EasyAntiCheat\\EasyAntiCheat_Setup.exe"
+			"command 1"		"uninstall 17 -console"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"5d8c5953b37c60c6335039eea7556166da4d453f5d251f38eca70166edf3b457ef04b3215d839ad45d4b79161e188e3318a48bdec9e02f605bf7ea292f06fe155938ca3e3a42639eb9f9c827bfab234b43d69c028e2a7765b0e4d497b1afdea3a5902ffc5190efee19ee09013b5a80ee45a84a851e46b992d609924de5272a33"
+}

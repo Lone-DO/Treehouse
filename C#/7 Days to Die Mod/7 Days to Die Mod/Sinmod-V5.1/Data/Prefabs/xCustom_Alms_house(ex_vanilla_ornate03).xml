@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+    <property name="CopyAirBlocks" value="True" />
+    <property name="AllowTopSoilDecorations" value="False" />
+    <property name="TraderArea" value="False" />
+    <property name="Zoning" value="Residential" />
+    <property name="RotationToFaceNorth" value="3" />
+    <property name="StaticSpawner.Class" value="SpawnSmall" />
+    <property name="AllowedTownships" value="city,town" />
+    <property name="AllowedBiomes" value="burnt_forest,snow,plains,pine_forest,forest,desert,wasteland_hub,wasteland" />
+</prefab>
