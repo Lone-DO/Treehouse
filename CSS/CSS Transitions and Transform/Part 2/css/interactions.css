@@ -1,6 +1,14 @@
 /* ================================= 
   Photo Overlay Transition
 ==================================== */
+.photo img {
+	transition-property: filter;
+	transition-duration: .5s;
+}
+
+.photo:hover > img {
+	filter: blur(10px);
+}
 
 .photo-overlay {
 	opacity: 0;
@@ -15,3 +23,30 @@
   Button Transitions
 ==================================== */
 
+.photo-overlay .button {
+	opacity: 0;
+	transition-property: opacity, background, box-shadow;
+	transition-delay: .2s, .3s, 0s;
+	transition-duration: .5s;
+}
+
+.photo-overlay:hover .button {
+	opacity: 1;
+}
+
+.photo-overlay .button:hover {
+	background: rgba(74, 137, 202, 1);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .7);
+} 
+
+.btn-icon {
+	transition-property: opacity, left;
+	transition-duration: .3s;
+	transition-delay: .3s;
+	transition-timing-function: ease-in;
+}
+
+.photo-overlay .button:hover .btn-icon {
+	opacity: 1;
+	left: 80%
+}
