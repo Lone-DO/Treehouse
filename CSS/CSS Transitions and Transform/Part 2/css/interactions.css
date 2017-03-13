@@ -2,8 +2,7 @@
   Photo Overlay Transition
 ==================================== */
 .photo img {
-	transition-property: filter;
-	transition-duration: .5s;
+	transition: filter .5s;
 }
 
 .photo:hover > img {
@@ -12,8 +11,7 @@
 
 .photo-overlay {
 	opacity: 0;
-	transition-property: opacity;
-	transition-duration: .5s;
+	transition: opacity .5s;
 }
 .photo-overlay:hover {
 	opacity: 1;
@@ -25,9 +23,10 @@
 
 .photo-overlay .button {
 	opacity: 0;
-	transition-property: opacity, background, box-shadow;
-	transition-delay: .2s, .3s, 0s;
-	transition-duration: .5s;
+	transition: opacity .3s .2s,
+				background .4s .3s,
+				box-shadow .5s 0s;
+	transition-timing-function: ease-out;
 }
 
 .photo-overlay:hover .button {
@@ -40,9 +39,8 @@
 } 
 
 .btn-icon {
-	transition-property: opacity, left;
-	transition-duration: .3s;
-	transition-delay: .3s;
+	transition: opacity .3s .3s,
+				left .3s .3s;
 	transition-timing-function: ease-in;
 }
 
