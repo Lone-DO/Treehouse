@@ -52,11 +52,11 @@ img:hover {
 }
 
 .slide .photo-overlay {
-	transform: translateX(-100%);
+	transform: translateX(100%);
 }
 
 .slide:hover img {
-	transform: translateX(100%);
+	transform: translateX(-100%);
 }
 
 .slide:hover .photo-overlay {
