@@ -11,28 +11,38 @@ svg {
   float: left;
 }
 
+.gear-bg,
+.hammer-bg,
+.heart-bg {
+	transition: .3s ease-out;
+}
+
+.gear-icon,
+.hammer-icon,
+.heart-icon {
+	transition: .4s ease-out;
+	transform-origin: center;
+}
 /* --------------------------
   GEAR
 --------------------------- */
 
-.gear-bg {
-	fill: #3881cc;
-	transition: fill .3s ease-out;
-}
-
-.gear-bg:hover {
-	fill: #333;
-	
+.gear:hover .gear-icon {
+	transform: rotate(45deg) scale(1.3);
 }
 
 /* --------------------------
   HAMMER
 --------------------------- */
 
-
+.hammer:hover .hammer-icon {
+	transform: rotate(45deg);
+}
 
 /* --------------------------
   HEART
 --------------------------- */
 
-
+.heart:hover .heart-icon {
+	transform: scale(1.3);
+}
