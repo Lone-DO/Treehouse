@@ -21,7 +21,7 @@ svg {
 .hammer-icon,
 .heart-icon {
 	transition: .4s ease-out;
-	transform-origin: center;
+	transform-origin: 200px 50px;
 }
 /* --------------------------
   GEAR
