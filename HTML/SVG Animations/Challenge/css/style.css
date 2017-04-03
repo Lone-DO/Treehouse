@@ -1,0 +1,109 @@
+/* Code challenge, Animate the star globe
+
+	- Hide stars initially below
+		* slide up to center
+
+	- Transition fill to yellow
+		* 100% to #FFF
+
+	- Scale & Rotate slightly
+		* 100% to default 
+
+	- Light stroke drawing around globe
+		* 100% Fade 
+*/
+
+/* --------------------------
+  Base
+--------------------------- */
+
+body {
+  padding-top: 60px;
+	background: #0f4e7a;
+}
+
+svg {
+	margin: auto;
+  display: block;
+	width: 28%;
+}
+
+/* --------------------------
+  Keyframes
+--------------------------- */
+
+@keyframes pop-up {
+	50% {
+		transform: translate3d(0, -10px, 0);
+	}
+	
+	80% {
+		transform: translate3d(0, 10px, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes shine {
+	0% {
+		transform: scale(1);
+	}
+	
+	50% {
+		fill: #ffff75;
+		transform: scale(1.2) rotate(-15deg);
+		opacity: 1;
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes offset {
+	50% {
+		stroke-opacity: 1;
+	}
+	
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* --------------------------
+  SVG Styles
+--------------------------- */
+.stars * {
+	transform-origin: 50% 50%;
+}
+
+.stars-bg {
+	stroke-opacity: 0;
+	stroke-dashoffset: 815;
+	stroke-dasharray: 815;
+	animation: offset 1s 2.2s linear forwards;
+}
+
+.star {
+	transform: translate3d(0, 180px, 0);
+	animation: pop-up .5s forwards,
+			   shine .6s ease-out forwards;
+}
+
+.star:nth-of-type(2) {
+/*	animation: shine 1s ease-in forwards;*/
+	animation-delay: 0s, 1.5s;
+	
+}
+
+.star:nth-of-type(1) {
+/*	animation: pop-up 1s ease-in .2s forwards;*/
+	animation-delay: .5s, 1.8s;
+}
+
+.star:nth-of-type(3) {
+/*	animation: pop-up 1s ease-in .4s forwards;*/
+	animation-delay: .8s, 2s;
+}
