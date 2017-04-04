@@ -1,10 +1,18 @@
 /* Floated Columns ------------------ */
 .tips {
 	@extend %columns;
-  float: left;
+  	float: left;
 }
 
 .resorts {
 	@extend %columns;
-  float: right;
+  	float: right;
+}
+
+.resorts,
+.tips {
+	@media #{$brk-narrow} {
+		float: none;
+		width: 100%;
+	}
 }
