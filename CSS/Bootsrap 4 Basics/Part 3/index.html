@@ -6,12 +6,54 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Full Stack Conf</title>
     <!-- bootstrap css -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
   <body>
 
+<!--    navbar-->
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#speakers">Speakers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#schedule">Schedule</a>
+          </li>
+        </ul>
+         <a class="navbar-brand pull-sm-right" href="#">Presented By Treehouse</a>
+      </div>
+    </nav>
+<!--    /navbar-->
+    
+    
+    
+<!--    jumbotron-->
+    <div class="jumbotron jumbotron-fluid bg-info text-white">
+      <div class="container text-sm-center pt-5">
+        <h1 class="display-2">Full Stack Conf</h1>
+        <p class="lead">A One day conference about all things JavaScript</p>
+        
+        <div class="btn-group mt-5" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+          <a type="button" class="btn btn-secondary" href="#speakers">See Speakers</a>
+        </div>
+      </div>
+      
+      
+    </div>
+<!--    /jumbotron-->
+    
 		<div class="container p-t-2">
-			
 			<!-- about -->
 			<div class="row">
 				<div class="col-lg-4 col-lg-push-4">
@@ -42,12 +84,15 @@
 			</div><!-- /about -->
 			
 			<!-- speakers -->
-			<h1 class="display-4 text-xs-center m-y-3 text-muted">Speakers</h1>
+			<h1 id="speakers" class="display-4 text-center my-3 text-muted">Speakers</h1>
 			[Speaker bios go here]
 			
 			<!-- schedule -->
-			<h1 class="display-4 text-xs-center m-y-3 text-muted">Schedule</h1>
+			<h1 class="display-4 text-center my-3 text-muted">Schedule</h1>
 			[Conference schedule goes here]
+      
+      <!-- Callout Button-->
+      <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out, register now</button>
 			
 			<!-- signup form -->
 			<hr>
@@ -67,11 +112,44 @@
 			  </div>
 			</div>
 			<hr><!-- /signup form -->
+      
+<!--      footer-->
+      <div class="row py-3">
+        <div class="col-md-7">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tracks</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary">Other Confs</button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">CSS Conf</a>
+                  <a class="dropdown-item" href="#">Python Conf</a>
+                  <a class="dropdown-item" href="#">Java Conf</a>
+                  <a class="dropdown-item" href="#">Swift Conf</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-5 text-md-right">
+          <small>&copy; 2016 Full Stack Conf &amp; Treehouse</small>
+        </div>
+      </div>
 			
 		</div><!-- /.container -->
 		
     <!-- jQuery first, then bootstrap js -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+		
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
 </html>
