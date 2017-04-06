@@ -8,16 +8,16 @@
     <!-- bootstrap css -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
-  <body>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
 
 <!--    navbar-->
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="container collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -44,7 +44,7 @@
         <p class="lead">A One day conference about all things JavaScript</p>
         
         <div class="btn-group mt-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Register Now</button>
           <a type="button" class="btn btn-secondary" href="#speakers">See Speakers</a>
         </div>
       </div>
@@ -55,7 +55,7 @@
     
 		<div class="container p-t-2">
 			<!-- about -->
-			<div class="row">
+			<div id="about" class="row">
 				<div class="col-lg-4 col-lg-push-4">
           <h3 class="m-b-2">About Full Stack Conf</h3>
 					<img class="m-b-1 img-fluid img-rounded hidden-xs-down" src="img/pdx.jpg" alt="Portland">
@@ -72,27 +72,137 @@
 				
 				<div class="col-lg-4">
           <h3 class="m-b-2">What You'll Learn</h3>
-		      <ul>
-		      	<li><strong>MongoDB</strong>: NoSQL database</li>
-		      	<li><strong>Angular</strong>: JavaScript framework</li>
-		      	<li><strong>Express</strong>: Framework for Node</li>
-		      	<li><strong>Node.js</strong>: JavaScript environment</li>
-		      	<li><strong>ES2015</strong>: Latest version of JavaScript</li>
-		      	<li><strong>Babel</strong>: JavaScript compiler</li>
-		      </ul>
+          <div class="list-group">
+            <a href="#" class="list-group-item"><strong>MongoDB</strong>: NoSQL database</a>
+            <a href="#" class="list-group-item"><strong>Angular</strong>: JavaScript framework </a>
+            <a href="#" class="list-group-item"><strong>Express</strong>: Framework for Node</a>
+            <a href="#" class="list-group-item"><strong>Node.js</strong>: JavaScript environment</a>
+            <a href="#" class="list-group-item"><strong>ES2015</strong>: Latest version of JavaScript</a>
+            <a href="#" class="list-group-item"><strong>Babel</strong>: JavaScript compiler</a>
+          </div>
 				</div>
 			</div><!-- /about -->
 			
 			<!-- speakers -->
 			<h1 id="speakers" class="display-4 text-center my-3 text-muted">Speakers</h1>
-			[Speaker bios go here]
+			<div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top img-fluid" src="img/angie.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Angie McAngelur </h4>
+              <p class="card-text">Angie is a Web developer and teacher,who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top img-fluid" src="img/nodestradamus.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">NodeStradamus</h4>
+              <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top img-fluid" src="img/geo.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Geo "Lo" Cation</h4>
+              <p class="card-text">Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support students in removing all barriers to learning code.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top img-fluid" src="img/ecma.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Ecma Scriptnstuff</h4>
+              <p class="card-text">Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top img-fluid" src="img/jay.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Jay Query</h4>
+              <p class="card-text">Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top img-fluid" src="img/json.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Json Babel</h4>
+              <p class="card-text">All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p>
+              Resources
+            </div>
+          </div>
+        </div>
+      </div><!-- /speakers -->
 			
 			<!-- schedule -->
-			<h1 class="display-4 text-center my-3 text-muted">Schedule</h1>
-			[Conference schedule goes here]
+      <ul class="list-group" id="schedule">
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Keynote: Internet of Things</h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">9:00am</span>
+          </div>
+          <p class="mb-1">NodeStradamus</p>
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Angular Basics</h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">10:00am</span>
+          </div>
+          <p class="mb-1">Angela McAngular</p>
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Hey, Mongo!</h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">11:00am</span>
+          </div>
+          <p class="mb-1">Jay Query</p>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-success flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Lunch</h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">12:00pm</span>
+          </div>
+          <p class="mb-1">Free pizza for everyone.</p>
+        </li>
+         <li class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Introducing ES2015</h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">1:00pm</span>
+          </div>
+          <p class="mb-1">Ecma Scriptnstuff</p>
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Gettin' MEAN</h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">2:00pm</span>
+          </div>
+          <p class="mb-1">Geo "Lo" Cation</p>
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">What's Babel? </h5>
+            <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">3:00pm</span>
+          </div>
+          <p class="mb-1">Json Babel</p>
+        </li>
+      </ul><!-- /schedule -->
       
       <!-- Callout Button-->
-      <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out, register now</button>
+      <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't miss out, register now</button>
 			
 			<!-- signup form -->
 			<hr>
@@ -145,6 +255,28 @@
       </div>
 			
 		</div><!-- /.container -->
+    
+<!--    -->
+    <div id="register" class="modal fade">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Form goes here...</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--    -->
 		
     <!-- jQuery first, then bootstrap js -->
 		
