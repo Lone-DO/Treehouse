@@ -16,47 +16,54 @@ namespace Csharp.FitnessFrog
 
             string entry = Console.ReadLine();
 
-            //Loop till user quits
-            if (entry == "quit")
+            try
             {
-               keepGoing = false;
-            }
-            else
-            {
-               int time = int.Parse(entry);
-
-               if (time <= 0)
+               //Loop till user quits
+               if (entry == "quit")
                {
-                  Console.WriteLine(time + " is not an acceptable value");
-                  continue;
-               }
-               else if (time <= 10)
-               {
-                  Console.WriteLine("Way to go hot stuff");
-               }
-               else if (time <= 30)
-               {
-                  Console.WriteLine("You must be a ninja warrior in training");
-               }
-               else if (time <= 60)
-               {
-                  Console.WriteLine("Aiming for 1st place");
+                  keepGoing = false;
                }
                else
                {
-                  Console.WriteLine("Now you are just showing off...");
+                  int time = int.Parse(entry);
+
+                  if (time <= 0)
+                  {
+                     Console.WriteLine(time + " is not an acceptable value");
+                     continue;
+                  }
+                  else if (time <= 10)
+                  {
+                     Console.WriteLine("Way to go hot stuff");
+                  }
+                  else if (time <= 30)
+                  {
+                     Console.WriteLine("You must be a ninja warrior in training");
+                  }
+                  else if (time <= 60)
+                  {
+                     Console.WriteLine("Aiming for 1st place");
+                  }
+                  else
+                  {
+                     Console.WriteLine("Now you are just showing off...");
+                  }
+
+                  //Add minutes to total
+                  workoutTotal += time;
+
+                  //Display total minutes excersised
+                  Console.WriteLine("You've Excersised for " + workoutTotal + " minutes.");
                }
 
-               //Add minutes to total
-               workoutTotal += time;
-
-               //Display total minutes excersised
-               Console.WriteLine("You've Excersised for " + workoutTotal + " minutes.");
+            }
+            catch (FormatException)
+            {
+               Console.WriteLine("Input is invalid, please input a number...");
             }
 
          }
          Console.Write("Goodbye");
-
       }
    }
 }

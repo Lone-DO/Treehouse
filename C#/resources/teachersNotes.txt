@@ -14,7 +14,7 @@ NameSpaces {
 	name: "Adobe.Illustrator",
 	method: "Paint()",
 	class: "Canvas"
-	}
+}
 
 void SendMessage(string message, string recipient) {
 	void: "returns no value",
@@ -27,4 +27,15 @@ Arithmetic {
    "() Inner most parenthesis first and from left to right",
    "/ * % From left to right",
    "+ - From left to right"
+}
+
+Unhandled Exception:
+System.IndexOutOfRangeException: Index has to be between upper and lower bound of the array.
+   at System.Array.GetValue (Int32 index) [0x00000] in :0 
+   at Oscorp.WebSpinner.Stop () [0x00000] in :0 
+   at Treehouse.Program.Main () [0x00000] in :0
+{
+   exceptionName: "System.IndexOutOfRangeException",
+   origin: "Treehouse.Program.Main",
+   methodOrder: (Main, Stop, GetValue) //bottom to top
 }
