@@ -49,3 +49,18 @@ System.IndexOutOfRangeException: Index has to be between upper and lower bound o
    try: "Attempts to follow through a method/ function, outputs error to follow up \"catch\"",
    catch: "Catches output error, used to handle errors to prevent crashing"
 }
+
+____
+
+Integers and Doubles: ( https://msdn.microsoft.com/en-us/library/ya5y69ds.aspx )
+Left	   | Right  | Message
+int	   | double | double
+int	   | int	   | int (beware of truncation!)
+double	| int	   | double
+
+int x = 2.9 //Error
+int x = (int)(2.9); // 'casting' removes anything after decimal
+
+____
+
+Refactoring: "Changing the syntax, rewriting code more fluently, means to make more efficicient"
