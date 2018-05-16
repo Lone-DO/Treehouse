@@ -6,3 +6,25 @@ fourPs {
    "Perform - We simply put the plan into action.",
    "Perfect - This is when we check to see if what we made has solved the problem and consider how to make it better. We can use the Four P's again to make improvements."
 } ( https://medium.com/@MatHelme/the-four-ps-of-problem-solving-6e15a39a0712 )
+
+using System; //using directive
+
+NameSpaces {
+	namespace: "Adobe.Illustrator.Canvas.Paint()",
+	name: "Adobe.Illustrator",
+	method: "Paint()",
+	class: "Canvas"
+	}
+
+void SendMessage(string message, string recipient) {
+	void: "returns no value",
+	SendMessage: "name of method",
+	string-message: "first parameter, type string",
+	string-recipient: "second parameter, type string"
+}
+
+Arithmetic {
+   "() Inner most parenthesis first and from left to right",
+   "/ * % From left to right",
+   "+ - From left to right"
+}
