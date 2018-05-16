@@ -39,3 +39,13 @@ System.IndexOutOfRangeException: Index has to be between upper and lower bound o
    origin: "Treehouse.Program.Main",
    methodOrder: (Main, Stop, GetValue) //bottom to top
 }
+
+{
+   int: "interger whole numbers",
+   double: "accepts decimals, same as int but more flexible",
+   bool: "Declares a boolean variable",
+   string: "Declares a variable as a string",
+   continue: "Sets loop back to beginning of method",
+   try: "Attempts to follow through a method/ function, outputs error to follow up \"catch\"",
+   catch: "Catches output error, used to handle errors to prevent crashing"
+}

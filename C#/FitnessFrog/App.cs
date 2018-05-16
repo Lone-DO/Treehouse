@@ -6,26 +6,26 @@ namespace Csharp.FitnessFrog
    {
       static void Main()
       {
-         int workoutTotal = 0;
+         double workoutTotal = 0;
          bool keepGoing = true;
 
          while (keepGoing == true)
          {
             //Prompt user for minutes excersised
-            Console.Write("Enter how many minutes you excercised, or enter 'quit' to stop the application: ");
+            Console.WriteLine("Enter how many minutes you excercised, or enter 'quit' to stop the application: ");
 
             string entry = Console.ReadLine();
 
             try
             {
                //Loop till user quits
-               if (entry == "quit")
+               if (entry.ToLower() == "quit")
                {
                   keepGoing = false;
                }
                else
                {
-                  int time = int.Parse(entry);
+                  double time = double.Parse(entry);
 
                   if (time <= 0)
                   {
