@@ -1,0 +1,8 @@
+C# Keywords ( https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ )
+
+fourPs {
+   "Prepare - This is where we understand and diagnose the problem.",
+   "Plan - This is where we organize everything before acting.",
+   "Perform - We simply put the plan into action.",
+   "Perfect - This is when we check to see if what we made has solved the problem and consider how to make it better. We can use the Four P's again to make improvements."
+} ( https://medium.com/@MatHelme/the-four-ps-of-problem-solving-6e15a39a0712 )
