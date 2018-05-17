@@ -83,7 +83,7 @@ ____
 https://teamtreehouse.com/library/using-treehouse-workspaces
 __
 Practice Projects
-Averager
+Averager - Complete
 Repeatedly prompt the user for numbers. Add all of the numbers together. When the user types in �done�, print the average of all of the numbers by dividing the total by the number of numbers entered.
 
 treehouse:~/workspace$ mcs Program.cs && mono Program.exe
@@ -94,11 +94,11 @@ Enter a number or type "done" to see the average: 4.2
 Enter a number or type "done" to see the average: 99
 Enter a number or type "done" to see the average: done
 Average: 36.2333333333333
-treehouse:~/workspace 
+treehouse:~/workspace
 
 __
 
-Interactive Quiz
+Interactive Quiz - Complete
 Write an interactive quiz. It should ask the user three multiple-choice or true/false questions about something. It must keep track of how many they get wrong, and print out a "score" at the end. 
 
 __
