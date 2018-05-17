@@ -3,7 +3,7 @@ ____
 
 Clear, compile, and run:
 
-clear && mcs Program.cs && mono Program.exe
+cls && mcs App.cs && mono App.exe
 
 Start REPL: csharp
 
