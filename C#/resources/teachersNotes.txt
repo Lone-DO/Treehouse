@@ -1,4 +1,15 @@
 C# Keywords ( https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ )
+____
+
+Clear, compile, and run:
+
+clear && mcs Program.cs && mono Program.exe
+
+Start REPL: csharp
+
+Quit REPL: quit
+
+____
 
 fourPs {
    "Prepare - This is where we understand and diagnose the problem.",
@@ -73,7 +84,7 @@ https://teamtreehouse.com/library/using-treehouse-workspaces
 __
 Practice Projects
 Averager
-Repeatedly prompt the user for numbers. Add all of the numbers together. When the user types in “done”, print the average of all of the numbers by dividing the total by the number of numbers entered.
+Repeatedly prompt the user for numbers. Add all of the numbers together. When the user types in ï¿½doneï¿½, print the average of all of the numbers by dividing the total by the number of numbers entered.
 
 treehouse:~/workspace$ mcs Program.cs && mono Program.exe
 Enter a number or type "done" to see the average: 5.5
@@ -101,7 +112,7 @@ Prompt the user for an operation (+ - / *).
 Prompt the user for another number.
 Perform the operation.
 Print the result to the screen.
-Repeat until the user types in “quit” at any of the prompts.
+Repeat until the user types in ï¿½quitï¿½ at any of the prompts.
 Extra Credit: Add the power operator using the ^ symbol. You can calculate a number raised to a power using the Math.Pow method.
 (https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)
 
@@ -110,5 +121,5 @@ __
 Math Function Calculator
 Prompt the user for a math function such as sine, cosine, tangent, square root, logarithm, etc. Then prompt the user for the function's parameter. Perform the function and print the result back to the screen.
 
-Use .NET’s Math class to do perform the math for you.
+Use .NETï¿½s Math class to do perform the math for you.
 (https://msdn.microsoft.com/en-us/library/system.math.aspx)
