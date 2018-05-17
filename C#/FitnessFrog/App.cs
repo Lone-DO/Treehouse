@@ -61,7 +61,8 @@ namespace Csharp.FitnessFrog
             }
 
          }
-         Console.WriteLine("Goodbye");
+         Console.WriteLine("Goodbye, Press any key to Close!");
+         Console.ReadKey();
       }
    }
 }
