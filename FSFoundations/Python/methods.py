@@ -17,13 +17,3 @@ subject_template = "Thanks for learning {} with us {}!"
 print(subject_template.format("Programming", "Billy"))
 # -> "Thanks for learning Programming with us Billy!"
 # __________________________
-
-# Booleans
-bool(0)  # False, 0 / Empty string or value
-bool(1)  # True, anything with a value or not 0
-# Scenario: Heidi wants to meet someone with kids but does not want someone who smokes.
-has_kids = True
-is_smoker = True
-
-print(has_kids and not is_smoker)  # false
-# __________________________
