@@ -6,7 +6,7 @@ def split_check(total, num_of_ppl):
         raise ValueError("At least one person is required to split the check")
     if total <= 0:
         raise ValueError("Bill cannot be negative, Please try again!")
-    elif total = 0:
+    elif total == 0:
         return "nothing, this order was on the house!"
     return math.ceil(total / num_of_ppl)
 
