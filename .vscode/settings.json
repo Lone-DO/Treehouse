@@ -3,6 +3,5 @@
       "*.css": "scss"
    },
    "editor.formatOnSave": true,
-   "prettier.tabWidth": 4,
-   "editor.tabSize": 3
+   "prettier.tabWidth": 4
 }
