@@ -1,0 +1,5 @@
+Initialize a new C# projects via Terminal
+# dotnet new console
+    -Created Project under name of parent folder
+    -Creates Program.cs file, 
+    -If files already exist, use "dotnet new console --force"
