@@ -34,6 +34,12 @@ namespace Basics
             Console.WriteLine(1);
             Console.WriteLine(2);
             Console.WriteLine(3);
+            // String Interpolation
+            Console.WriteLine($"Insert, {Greet()}");
+        }
+        static string Greet()
+        {
+            return "Hello World";
         }
     }
 }
