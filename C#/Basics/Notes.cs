@@ -39,6 +39,10 @@ namespace Basics
         }
         static string Greet()
         {
+            // \n New Line
+            // \t Indent/ Tab
+            // \" Double Qoutes
+            // \\ Backslash
             return "Hello World";
         }
     }
