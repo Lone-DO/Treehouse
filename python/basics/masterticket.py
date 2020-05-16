@@ -1,8 +1,7 @@
+SERVICE_CHARGE = 1.2
 TICKET_PRICE = 10
 tickets_remaining = 100
 exit = False
-
-# Output how many tickets are remaining using the tickets_remaining variable
 
 
 def Quantity(customer):
@@ -17,7 +16,7 @@ def Quantity(customer):
 
 
 def Sum(amount, cost):
-    return amount * cost
+    return (amount * cost) * SERVICE_CHARGE
 
 
 def Checkout(amount, total, stock):
@@ -28,7 +27,7 @@ def Checkout(amount, total, stock):
             print("Thank you for your order {}".format(name))
             return stock - tickets
         else:
-            print("Error, Cannot process order over available tickets")
+            print("Error, Cannot process order over available tickets({})".format(stock))
             return stock
     else:
         print("Order has been cancelled, Have a great day!")
