@@ -16,12 +16,18 @@ namespace Treehouse.MediaLibrary
         public string GetDisplayText()
         {
             string message = $"Movie: {Title} by {Director}";
-            if (OnLoan) return $"{message} (Currently loaned out to {Loanee})";
+            if (!string.IsNullOrEmpty(Loanee)) return $"{message} (Currently loaned out to {Loanee})";
+            else if (OnLoan) return $"{message} (Currently Loaned out)";
             else return message;
         }
         public void Loan(string person)
         {
             Loanee = person;
+            Loan();
+        }
+
+        public void Loan()
+        {
             OnLoan = true;
         }
 

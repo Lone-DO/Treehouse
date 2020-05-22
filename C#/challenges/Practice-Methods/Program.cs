@@ -19,6 +19,8 @@ namespace Treehouse.MediaLibrary
             Console.WriteLine(Sonic.GetDisplayText());
             Sonic.Return();
             Console.WriteLine(Sonic.GetDisplayText());
+            Sonic.Loan();
+            Console.WriteLine(Sonic.GetDisplayText());
         }
     }
 }
