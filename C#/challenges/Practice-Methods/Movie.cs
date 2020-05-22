@@ -19,16 +19,16 @@ namespace Treehouse.MediaLibrary
             if (OnLoan) return $"{message} (Currently loaned out to {Loanee})";
             else return message;
         }
-        // public void Loan(string person)
-        // {
-        //     Loanee = person;
-        //     OnLoan = true;
-        // }
+        public void Loan(string person)
+        {
+            Loanee = person;
+            OnLoan = true;
+        }
 
-        // public void Return()
-        // {
-        //     Loanee = null;
-        //     OnLoan = false;
-        // }
+        public void Return()
+        {
+            Loanee = null;
+            OnLoan = false;
+        }
     }
 }

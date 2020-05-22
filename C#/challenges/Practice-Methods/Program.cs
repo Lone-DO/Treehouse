@@ -14,11 +14,11 @@ namespace Treehouse.MediaLibrary
             Console.WriteLine(book.GetDisplayText());
             Console.WriteLine(movie.GetDisplayText());
 
-            // Movie Sonic = new Movie("Sonic Adventures", "Michael Bay");
-            // Sonic.Loan("Jerry");
-            // Console.WriteLine(Sonic.GetDisplayText());
-            // Sonic.Return();
-            // Console.WriteLine(Sonic.GetDisplayText());
+            Movie Sonic = new Movie("Sonic Adventures", "Michael Bay");
+            Sonic.Loan("Jerry");
+            Console.WriteLine(Sonic.GetDisplayText());
+            Sonic.Return();
+            Console.WriteLine(Sonic.GetDisplayText());
         }
     }
 }
