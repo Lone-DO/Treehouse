@@ -15,14 +15,7 @@ namespace TreehousDefense
         }
         public int DistanceTo(int x, int y)
         {
-            int xDiff = X - x;
-            int yDiff = Y - y;
-
-            int xDiffSquared = xDiff * xDiff;
-            int yDiffSquared = yDiff * yDiff;
-
-            return (int)Math.Sqrt(yDiffSquared + xDiffSquared);
-
+            return (int)Math.Sqrt(Math.Pow(X - x, 2) + Math.Pow(Y - Y, 2));
         }
     }
 }
