@@ -4,9 +4,7 @@ namespace TreehousDefense
     {
         static void Main()
         {
-            Map map = new Map();
-            map.Width = 10;
-            map.Height = 20;
+            Map map = new Map(10, 20);
 
             int area = map.Width * map.Height;
         }
