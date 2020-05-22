@@ -15,10 +15,7 @@ namespace TreehousDefense
             bool validX = point.X >= 0 && point.X <= Width;
             bool validY = point.Y >= 0 && point.Y <= Height;
 
-            bool inbound = validX && validY;
-            bool outbound = !inbound;
-
-            return inbound;
+            return validX && validY; ;
         }
     }
 
