@@ -2,9 +2,19 @@ namespace TreehousDefense
 {
     class Invader
     {
-        public void Main()
-        {
+        private MapLocation _location;
 
+        public MapLocation Location
+        {
+            get
+            {
+                return _location;
+            }
+            set
+            {
+                _location = value;
+                System.Console.WriteLine("Location changed");
+            }
         }
     }
 }
