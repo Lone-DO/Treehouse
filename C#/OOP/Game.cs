@@ -12,7 +12,16 @@ namespace TreehousDefense
 
             try
             {
-                MapLocation mapLocation = new MapLocation(11, 20, map);
+                MapLocation[] mapLocation = {
+                    new MapLocation(0, 1, map),
+                    new MapLocation(1, 1, map),
+                    new MapLocation(2, 1, map),
+                    new MapLocation(3, 1, map),
+                    new MapLocation(4, 1, map),
+                    new MapLocation(5, 1, map),
+                    new MapLocation(6, 1, map),
+                    new MapLocation(7, 1, map)
+                };
 
             }
             catch (OutOfBoundsException err)
