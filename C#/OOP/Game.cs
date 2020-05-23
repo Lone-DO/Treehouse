@@ -8,11 +8,10 @@ namespace TreehousDefense
         {
             Map map = new Map(10, 20);
 
-
-
             try
             {
-                MapLocation[] mapLocation = {
+                Path path = new Path(
+                    new[] {
                     new MapLocation(0, 1, map),
                     new MapLocation(1, 1, map),
                     new MapLocation(2, 1, map),
@@ -21,8 +20,10 @@ namespace TreehousDefense
                     new MapLocation(5, 1, map),
                     new MapLocation(6, 1, map),
                     new MapLocation(7, 1, map)
-                };
-
+                    }
+                );
+                MapLocation location = path.GetLocationAt(8);
+                if (location != null) Console.WriteLine($"{location.X}, {location.Y}");
             }
             catch (OutOfBoundsException err)
             {
@@ -30,11 +31,11 @@ namespace TreehousDefense
             }
             catch (TreehousDefenseException)
             {
-                Console.WriteLine("Unhandled Exception");
+                Console.WriteLine("Unhandled TreehousDefenseException");
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                Console.WriteLine("Unhandled Exception");
+                Console.WriteLine($"Unhandled Exception: {err}");
             }
 
         }
