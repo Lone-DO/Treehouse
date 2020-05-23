@@ -9,9 +9,7 @@ namespace TreehousDefense
             _path = path;
         }
 
-        public MapLocation GetLocationAt(int pathStep)
-        {
-            return (pathStep < _path.Length) ? _path[pathStep] : null;
-        }
+        public MapLocation GetLocationAt(int pathStep) => (pathStep < _path.Length) ? _path[pathStep] : null;
+
     }
 }

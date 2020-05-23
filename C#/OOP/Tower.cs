@@ -12,13 +12,10 @@ namespace TreehousDefense
 
         public Tower(MapLocation location)
         {
-            // Add validation so Tower isnt placed on Path
             _location = location;
         }
-        public bool IsSuccessfulShot()
-        {
-            return _random.NextDouble() < _accuracy;
-        }
+        public bool IsSuccessfulShot() => _random.NextDouble() < _accuracy;
+
         public void FireOnInvaders(Invader[] invaders)
         {
             foreach (Invader invader in invaders)
@@ -30,6 +27,7 @@ namespace TreehousDefense
                         invader.TakeDamage(_power);
                         Console.WriteLine("Hit Confirmed");
                     }
+                    else Console.WriteLine("Missed");
                     break;
                 }
             }
