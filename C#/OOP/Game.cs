@@ -8,12 +8,17 @@ namespace TreehousDefense
         {
             Map map = new Map(10, 20);
 
-            Point point = new Point(4, 2);
-            bool isOnMap = map.OnMap(point);
-            Console.WriteLine(isOnMap);
-            point = new Point(11, 19);
-            isOnMap = map.OnMap(point);
-            Console.WriteLine(isOnMap);
+
+
+            try
+            {
+                MapLocation mapLocation = new MapLocation(11, 20, map);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+
         }
     }
 }
