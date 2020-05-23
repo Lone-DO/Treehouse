@@ -22,9 +22,7 @@ namespace TreehousDefense
                     new MapLocation(7, 1, map)
                     }
                 );
-                Invader invader = new Invader();
-                MapLocation location = new MapLocation(0, 0, map);
-                invader.Location = location;
+
             }
             catch (OutOfBoundsException err)
             {
