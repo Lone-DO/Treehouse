@@ -12,13 +12,11 @@ namespace TreehousDefense
 
         public void FireOnInvaders(Invader[] invaders)
         {
-            int index = 0;
-            while (index < invaders.Length)
-            {
-                Invader invader = invaders[index];
-                // Do stuff to invader
 
-                index++;
+            for (int i = 0; i < invaders.Length; i++)
+            {
+                // Do stuff to invader
+                Invader invader = invaders[i];
             }
         }
     }
