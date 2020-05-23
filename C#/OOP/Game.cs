@@ -13,10 +13,19 @@ namespace TreehousDefense
             try
             {
                 MapLocation mapLocation = new MapLocation(11, 20, map);
+
             }
-            catch (Exception err)
+            catch (OutOfBoundsException err)
             {
                 Console.WriteLine(err.Message);
+            }
+            catch (TreehousDefenseException)
+            {
+                Console.WriteLine("Unhandled Exception");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unhandled Exception");
             }
 
         }
