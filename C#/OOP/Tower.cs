@@ -2,6 +2,8 @@ namespace TreehousDefense
 {
     class Tower
     {
+        private const int _power = 1;
+        private const int _range = 1;
         private readonly MapLocation _location;
 
         public Tower(MapLocation location)
@@ -12,11 +14,13 @@ namespace TreehousDefense
 
         public void FireOnInvaders(Invader[] invaders)
         {
-
-            for (int i = 0; i < invaders.Length; i++)
+            foreach (Invader invader in invaders)
             {
-                // Do stuff to invader
-                Invader invader = invaders[i];
+                if (invader.IsActive && _location.InRangeOf(invader.Location, _range))
+                {
+                    invader.TakeDamage(_power);
+                    break;
+                }
             }
         }
     }
