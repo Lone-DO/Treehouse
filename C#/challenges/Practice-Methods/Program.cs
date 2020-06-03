@@ -8,16 +8,24 @@ namespace Treehouse.MediaLibrary
         {
             try
             {
+                Album[] albums = {
+                    new Album("Yellow Submarine", "The Beatles"),
+                    new Album("Black or White", "Michael Jackson"),
+                };
+                Book[] books = {
+                    new Book("Moby-Dick", "Herman Melville"),
+                    new Book("Clean Code", "Robert C. Martin")
+                };
+                Movie[] movies = {
+                    new Movie("Lawrence of Arabia", "David Lean"),
+                    new Movie("Pokemon", "Nintendo")
+                };
 
-                var album = new Album("Yellow Submarine", "The Beatles");
-                var book = new Book("Moby-Dick", "Herman Melville");
-                book.Loan();
-                var movie = new Movie("Lawrence of Arabia", "David Lean");
-                // var fakeMovie = new Movie("", "");
+                books[0].Loan();
 
-                Console.WriteLine(album.GetDisplayText());
-                Console.WriteLine(book.GetDisplayText());
-                Console.WriteLine(movie.GetDisplayText());
+                Console.WriteLine(albums[0].GetDisplayText());
+                Console.WriteLine(books[0].GetDisplayText());
+                Console.WriteLine(movies[0].GetDisplayText());
 
                 Movie Sonic = new Movie("Sonic Adventures", "Michael Bay");
                 Sonic.Loan("Jerry");
@@ -25,9 +33,9 @@ namespace Treehouse.MediaLibrary
                 Sonic.Return();
                 Console.WriteLine(Sonic.GetDisplayText());
 
-                DetectMediaType(book);
-                DetectMediaType(album);
-                DetectMediaType(movie);
+                DetectMediaType(books[0]);
+                DetectMediaType(albums[0]);
+                DetectMediaType(movies[0]);
             }
             catch (Exception err)
             {
