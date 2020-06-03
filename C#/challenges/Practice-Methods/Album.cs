@@ -1,18 +1,20 @@
 namespace Treehouse.MediaLibrary
 {
-    class Album
+    class Album : MediaType
     {
-        public readonly string Title;
+        // public readonly string Title;
         public readonly string Artist;
 
-        public Album(string title, string artist)
+        public Album(string title, string artist) : base(title)
         {
-            Title = title;
             Artist = artist;
         }
         public string GetDisplayText()
         {
-            return $"Album: {Title} by {Artist}";
+            string message = $"Album: {Title} by {Artist}";
+            if (!string.IsNullOrEmpty(Loanee)) return $"{message} (Currently loaned out to {Loanee})";
+            else if (OnLoan) return $"{message} (Currently Loaned out)";
+            else return message;
         }
     }
 }

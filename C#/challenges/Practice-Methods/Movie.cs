@@ -1,15 +1,13 @@
 namespace Treehouse.MediaLibrary
 {
-    class Movie
+    class Movie : MediaType
     {
-        public readonly string Title;
-        public readonly string Director;
-        public string Loanee;
-        public bool OnLoan;
 
-        public Movie(string title, string director)
+        public readonly string Director;
+
+
+        public Movie(string title, string director) : base(title)
         {
-            Title = title;
             Director = director;
         }
 
@@ -20,21 +18,6 @@ namespace Treehouse.MediaLibrary
             else if (OnLoan) return $"{message} (Currently Loaned out)";
             else return message;
         }
-        public void Loan(string person)
-        {
-            Loanee = person;
-            Loan();
-        }
 
-        public void Loan()
-        {
-            OnLoan = true;
-        }
-
-        public void Return()
-        {
-            Loanee = null;
-            OnLoan = false;
-        }
     }
 }
