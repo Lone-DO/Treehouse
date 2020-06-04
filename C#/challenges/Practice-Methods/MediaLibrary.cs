@@ -13,12 +13,19 @@ namespace Treehouse.MediaLibrary
 
         public MediaType GetItemAt(int index)
         {
-            if (index >= _items.Length)
+            if (index >= this.NumberOfItems)
             {
                 System.Console.WriteLine($"Element at {index} doesn't exist");
                 return null;
             }
             else return _items[index];
+        }
+        public int NumberOfItems
+        {
+            get
+            {
+                return _items.Length;
+            }
         }
     }
 }

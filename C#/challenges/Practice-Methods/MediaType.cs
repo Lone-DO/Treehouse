@@ -2,9 +2,10 @@ namespace Treehouse.MediaLibrary
 {
     class MediaType
     {
-        public string Loanee;
-        public bool OnLoan;
-        public readonly string Title;
+
+        public string Title { get; private set; }
+        public string Loanee { get; private set; } = "";
+        public bool OnLoan { get; private set; } = false;
 
         public MediaType(string title)
         {
@@ -27,6 +28,16 @@ namespace Treehouse.MediaLibrary
         {
             Loanee = null;
             OnLoan = false;
+        }
+
+        public string OnLoanText
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(Loanee)) return $"(Currently loaned out to {Loanee})";
+                else if (OnLoan) return "(Currently Loaned out)";
+                else return "";
+            }
         }
     }
 }

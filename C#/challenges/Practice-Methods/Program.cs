@@ -52,17 +52,17 @@ namespace Treehouse.MediaLibrary
             if (item is Book)
             {
                 Book book = (Book)item;
-                Console.WriteLine(book.GetDisplayText());
+                Console.WriteLine(book.DisplayText);
             }
             else if (item is Album)
             {
                 Album album = (Album)item;
-                Console.WriteLine(album.GetDisplayText());
+                Console.WriteLine(album.DisplayText);
             }
             else if (item is Movie)
             {
                 Movie movie = (Movie)item;
-                Console.WriteLine(movie.GetDisplayText());
+                Console.WriteLine(movie.DisplayText);
             }
             else throw new System.ArgumentException("Exception: Unexpected media subtype encountered.");
         }
