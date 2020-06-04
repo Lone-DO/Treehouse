@@ -1,3 +1,4 @@
+using System.Linq;
 using System;
 
 namespace Treehouse.MediaLibrary
@@ -8,34 +9,26 @@ namespace Treehouse.MediaLibrary
         {
             try
             {
-                Album[] albums = {
+                MediaType[] Items = {
                     new Album("Yellow Submarine", "The Beatles"),
                     new Album("Black or White", "Michael Jackson"),
-                };
-                Book[] books = {
                     new Book("Moby-Dick", "Herman Melville"),
-                    new Book("Clean Code", "Robert C. Martin")
-                };
-                Movie[] movies = {
+                    new Book("Clean Code", "Robert C. Martin"),
                     new Movie("Lawrence of Arabia", "David Lean"),
                     new Movie("Pokemon", "Nintendo")
                 };
 
-                books[0].Loan();
+                MediaLibrary Library = new MediaLibrary(Items);
+                Library.GetItemAt(2).Loan("John");
+                Library.GetItemAt(4).Loan();
 
-                Console.WriteLine(albums[0].GetDisplayText());
-                Console.WriteLine(books[0].GetDisplayText());
-                Console.WriteLine(movies[0].GetDisplayText());
-
-                Movie Sonic = new Movie("Sonic Adventures", "Michael Bay");
-                Sonic.Loan("Jerry");
-                Console.WriteLine(Sonic.GetDisplayText());
-                Sonic.Return();
-                Console.WriteLine(Sonic.GetDisplayText());
-
-                DetectMediaType(books[0]);
-                DetectMediaType(albums[0]);
-                DetectMediaType(movies[0]);
+                DetectMediaType(Library.GetItemAt(1));
+                DetectMediaType(Library.GetItemAt(3));
+                DetectMediaType(Library.GetItemAt(5));
+                Display(Library.GetItemAt(0));
+                Display(Library.GetItemAt(2));
+                Display(Library.GetItemAt(4));
+                Display(Library.GetItemAt(6));
             }
             catch (Exception err)
             {
@@ -46,11 +39,32 @@ namespace Treehouse.MediaLibrary
 
         {
             string type;
+            if (item == null) return;
             if (item is Book) type = "book";
             else if (item is Album) type = "album";
-            // else if (item is Movie) type = "movie";
+            else if (item is Movie) type = "movie";
             else throw new System.ArgumentException("Exception: Unexpected media subtype encountered.");
             Console.WriteLine($"{item.Title} is an {type}!");
+        }
+
+        static void Display(MediaType item)
+        {
+            if (item is Book)
+            {
+                Book book = (Book)item;
+                Console.WriteLine(book.GetDisplayText());
+            }
+            else if (item is Album)
+            {
+                Album album = (Album)item;
+                Console.WriteLine(album.GetDisplayText());
+            }
+            else if (item is Movie)
+            {
+                Movie movie = (Movie)item;
+                Console.WriteLine(movie.GetDisplayText());
+            }
+            else throw new System.ArgumentException("Exception: Unexpected media subtype encountered.");
         }
     }
 }
