@@ -4,11 +4,11 @@ namespace Treehouse.MediaLibrary
     class MediaLibrary
     {
 
-        private MediaType[] _items;
+        public MediaType[] Items { get; private set; }
 
         public MediaLibrary(MediaType[] items)
         {
-            _items = items;
+            Items = items;
         }
 
         public MediaType GetItemAt(int index)
@@ -18,14 +18,49 @@ namespace Treehouse.MediaLibrary
                 System.Console.WriteLine($"Element at {index} doesn't exist");
                 return null;
             }
-            else return _items[index];
+            else return Items[index];
         }
         public int NumberOfItems
         {
             get
             {
-                return _items.Length;
+                return Items.Length;
             }
+        }
+
+        public void DisplayItems()
+        {
+            for (int index = 0; index < Items.Length; index++)
+            {
+                if (Items[index] is Book)
+                {
+                    Book book = (Book)Items[index];
+                    Console.WriteLine(book.DisplayText);
+                }
+                else if (Items[index] is Album)
+                {
+                    Album album = (Album)Items[index];
+                    Console.WriteLine(album.DisplayText);
+                }
+                else if (Items[index] is Movie)
+                {
+                    Movie movie = (Movie)Items[index];
+                    Console.WriteLine(movie.DisplayText);
+                }
+                else throw new System.ArgumentException("Exception: Unexpected media subtype encountered.");
+            }
+        }
+
+        public MediaType FindItem(string criteria)
+        {
+            foreach (var item in Items)
+            {
+                if (item.Title.ToLower().Contains(criteria.ToLower()))
+                {
+                    return item;
+                }
+            }
+            return null;
         }
     }
 }

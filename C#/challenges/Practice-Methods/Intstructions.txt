@@ -1,3 +1,11 @@
+1st Challenge
+Add a method named DisplayItems() to the MediaLibrary class.
+
+Use a for loop to loop through the items array contained within the MediaLibrary class.
+Cast each item to its subtype and access its DisplayText property, passing the property's value to a Console.WriteLine() method call.
+In the Program.cs file, replace the calls to the Display() method with a single call to the DisplayItems() method.
+
+
 ---------------------------------------------------------------------------------------
 Practice Properties in C#
 
