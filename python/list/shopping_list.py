@@ -6,6 +6,11 @@ def addItem(item):
     print(f"You have {len(shopping_list)} items on your list")
 
 
+def show_list():
+    for item in shopping_list:
+        print(f"* \t{item}")
+
+
 def show_help():
     print("What should we pick up at the store?")
     print("""
@@ -17,6 +22,10 @@ Enter 'HELP' for this help.
 show_help()
 while True:
     new_item = input("> ")
+
+    if new_item.upper() == "LIST":
+        show_list()
+        continue
 
     if new_item.upper() == 'DONE':
         break
