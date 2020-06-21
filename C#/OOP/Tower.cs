@@ -26,7 +26,8 @@ namespace TreehouseDefense
                     if (IsSuccessfulShot())
                     {
                         invader.TakeDamage(Power);
-                        Console.WriteLine("Hit Confirmed");
+                        if (invader.IsNeutralized) Console.WriteLine($"Invader neutrulized at, {invader.Location}");
+                        Console.WriteLine($"Hit Confirmed");
                     }
                     else Console.WriteLine("Missed");
                     break;
