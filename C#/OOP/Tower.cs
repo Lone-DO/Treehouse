@@ -1,6 +1,6 @@
 using System;
 
-namespace TreehousDefense
+namespace TreehouseDefense
 {
     class Tower
     {

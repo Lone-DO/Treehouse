@@ -1,4 +1,4 @@
-namespace TreehousDefense
+namespace TreehouseDefense
 {
     class Map
     {

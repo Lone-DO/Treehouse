@@ -1,6 +1,6 @@
 using System;
 
-namespace TreehousDefense
+namespace TreehouseDefense
 {
     class Game
     {
@@ -25,9 +25,9 @@ namespace TreehousDefense
 
                 Invader[] invaders =
                 {
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
+                    new ShieldedInvader(path),
+                    new FastInvader(path),
+                    new StrongInvader(path),
                     new Invader(path),
                 };
                 Tower[] towers = {
@@ -48,9 +48,9 @@ namespace TreehousDefense
             {
                 Console.WriteLine(err.Message);
             }
-            catch (TreehousDefenseException)
+            catch (TreehouseDefenseException)
             {
-                Console.WriteLine("Unhandled TreehousDefenseException");
+                Console.WriteLine("Unhandled TreehouseDefenseException");
             }
             catch (Exception err)
             {
