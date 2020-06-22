@@ -2,14 +2,13 @@
 {
 	class ShieldedInvader : Invader
 	{
-		private static System.Random _random = new System.Random();
-		
+	
 		public ShieldedInvader(Path path) : base(path)
         {}
 
 		public override void TakeDamage(int factor)
         {
-			if (_random.NextDouble() < .5)
+			if (Random.NextDouble() < .5)
             {
 				base.TakeDamage(factor);
             }
