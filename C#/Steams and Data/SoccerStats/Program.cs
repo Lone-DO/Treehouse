@@ -4,26 +4,30 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml.Xsl;
 using Newtonsoft.Json;
+using System.Net;
+
 namespace SoccerStats
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string currentDir = Directory.GetCurrentDirectory();
-            var directory = new DirectoryInfo(currentDir);
-            var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
-            var fileContents = ReadSoccerResults(fileName);
-            fileName = Path.Combine(directory.FullName, "players.json");
-            var players = DeserializePLayers(fileName);
-            var topTenPlayers = GetTopTenPlayers(players);
-            foreach (var player in topTenPlayers)
-            {
-                Console.WriteLine($"Name: {player.FirstName}, Points Per Game: {player.PointsPerGame}");
-            }
+            //string currentDir = Directory.GetCurrentDirectory();
+            //var directory = new DirectoryInfo(currentDir);
+            //var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
+            //var fileContents = ReadSoccerResults(fileName);
+            //fileName = Path.Combine(directory.FullName, "players.json");
+            //var players = DeserializePLayers(fileName);
+            //var topTenPlayers = GetTopTenPlayers(players);
+            //foreach (var player in topTenPlayers)
+            //{
+            //    Console.WriteLine($"Name: {player.FirstName}, Points Per Game: {player.PointsPerGame}");
+            //}
 
-            fileName = Path.Combine(directory.FullName, "topTenPlayers.json");
-            SerializePlayesToFile(topTenPlayers, fileName);
+            //fileName = Path.Combine(directory.FullName, "topTenPlayers.json");
+            //SerializePlayesToFile(topTenPlayers, fileName);
+
+            Console.WriteLine(GetGoogleHomePage());
         }
 
         public static string ReadFile(string fileName)
@@ -130,6 +134,18 @@ namespace SoccerStats
                 if (counter == 10) break;
             }
             return topTenPlayers;
+        }
+
+        public static string GetGoogleHomePage()
+        {
+            var webClient = new WebClient();
+            byte[] googleHome = webClient.DownloadData("https://www.google.com");
+
+            using (var stream = new MemoryStream(googleHome))
+            using (var reader = new StreamReader(stream))
+            {
+               return reader.ReadToEnd();
+            }
         }
     }
 }
