@@ -12,7 +12,13 @@ namespace SoccerStats
             var directory = new DirectoryInfo(currentDir);
             var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
             var fileContents = ReadFile(fileName);
-            Console.Write(fileContents);
+            var fileLines = fileContents.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            //Console.Write(fileContents);
+
+            foreach (var line in fileLines)
+            {
+                Console.WriteLine(line);
+            }
         }
 
         public static string ReadFile(string fileName)
