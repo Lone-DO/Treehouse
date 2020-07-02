@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Xml.Xsl;
 
 namespace SoccerStats
 {
@@ -9,10 +10,16 @@ namespace SoccerStats
         {
             string currentDir = Directory.GetCurrentDirectory();
             var directory = new DirectoryInfo(currentDir);
-            var files = directory.GetFiles("*.txt");
-            foreach(var file in files)
-            {
-                Console.WriteLine(file.Name);
+            var filename = Path.Combine(directory.FullName, "data.txt");
+            var file = new FileInfo(filename);
+            if (file.Exists)
+            { 
+                using (var reader = new StreamReader(file.FullName))
+                {
+                    Console.SetIn(reader);
+                    Console.WriteLine(Console.ReadLine());
+                }
+                Console.ReadLine();
             }
         }
     }
