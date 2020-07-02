@@ -41,6 +41,8 @@ namespace SoccerStats
                         gameResult.GameDate = gameDate;
                     }
 
+                    gameResult.TeamName = values[1];
+                    
                     HomeOrAway homeOrAway;
                     if (Enum.TryParse(values[2], out homeOrAway))
                     {
@@ -77,7 +79,6 @@ namespace SoccerStats
                         gameResult.PossesionPercent = posessionPercent;
                     }
 
-                    gameResult.TeamName = values[1];
                     soccerResults.Add(gameResult);
                 }
             }
