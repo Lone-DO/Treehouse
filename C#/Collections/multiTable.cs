@@ -1,8 +1,19 @@
 using System;
+using System.Collections.Generic;
+
 namespace Treehouse.CodeChallenges
 {
     public static class MathHelpers
     {
+        public static List<int> GetPowersOf2(int count)
+        {
+            List<int> powerList = new List<int>();
+            for (int index = 0; index < count; index++)
+            {
+                powerList.Add((int)Math.Pow(2, index));
+            }
+            return powerList;
+        }
         public static int[,] BuildMultiplicationTable(int maxFactor)
         {
             int[,] table = new int[maxFactor + 1, maxFactor + 1];
