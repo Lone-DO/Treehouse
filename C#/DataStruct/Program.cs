@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GenericsDemo
 {
@@ -16,7 +17,11 @@ namespace GenericsDemo
             var set1 = new HashSet<int> { 3, 6, 9, 12, 15 };
             var array1 = new[] { 4, 8, 12, 16, 20 };
 
-            int numOdd = 0;
+            int numOdd =
+                list1.Count(x => IsOdd(x)) +
+                list2.Count(x => IsOdd(x)) +
+                set1.Count(x => IsOdd(x)) +
+                array1.Count(x => IsOdd(x));
         }
     }
 }
