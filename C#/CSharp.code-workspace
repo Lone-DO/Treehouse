@@ -2,13 +2,15 @@
    "folders": [
       {
          "path": "C:\\dev\\home\\Treehouse"
+      },
+      {
+         "path": "DataStruct"
       }
    ],
    "settings": {
       "files.associations": {
          "*.css": "scss"
       },
-      "terminal.integrated.shell.windows":
-         "C:\\Program Files\\Git\\bin\\bash.exe"
+      "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
    }
 }
