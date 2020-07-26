@@ -16,17 +16,23 @@ namespace GenericsDemo
 
 
             var ec = new EnumberableCompositor<int> { list1, list2, set1, array1 };
-            //int numOdd = 0;
+            int numOdd = 0;
 
-            //foreach(var value in ec)
-            //{
-            //    if (IsOdd(value))
-            //    {
-            //        numOdd++;
-            //    }
-            //}
+            foreach (var value in ec)
+            {
+                if (IsOdd(value))
+                {
+                    numOdd++;
+                }
+            }
 
-            //int numOdd = ec.Count(x => IsOdd(x));
+            numOdd = ec.Count(x => IsOdd(x));
+
+            IEnumerable<int> firstThree = Utils.Take<int>(list1, 3);
+            foreach(var item in firstThree)
+            {
+
+            }
         }
 
         public static bool IsOdd(int value)
