@@ -4,7 +4,15 @@ using System.Linq;
 
 namespace GenericsDemo
 {
-    class EnumberableCompositor<T> : IEnumerable<T>
+    static class EnumerableCompositor
+    {
+        public static EnumerableCompositor<T> EC<T>(params IEnumerable<T>[] collections)
+        {
+            return new EnumerableCompositor<T>(collections);
+        }
+    }
+
+    class EnumerableCompositor<T> : IEnumerable<T>
     {
         private List<IEnumerable<T>> _collections;
 
@@ -13,11 +21,11 @@ namespace GenericsDemo
             _collections.Add(collection);
         }
 
-        public EnumberableCompositor()
+        public EnumerableCompositor()
         {
             _collections = new List<IEnumerable<T>>();
         }
-        public EnumberableCompositor(IEnumerable<IEnumerable<T>> collections)
+        public EnumerableCompositor(IEnumerable<IEnumerable<T>> collections)
         {
             _collections = collections.ToList();
         }
